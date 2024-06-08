@@ -10,54 +10,71 @@
 </head>
 
 <body>
+
   <div class="contenedor trans">
-            <h1 class="titulo">LINEA RESCATE</h1>
-            <form id="Form">
-                <div class="align-content-center justify-content-center pt-3">
-                  <div class="row">
-                    <div class="form-group col-sm-8">
-                        <label for="NombreTec">NOMBRE</label>
-                        <input type="text" class="form-control trans" id="NombreTec" aria-describedby="NombreTecnico">
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="Trabajador">TECNICO O GESTOR</label>
-                        <select class="custom-select  trans" id="Trabajador">
-                            <option selected>...</option>
-                            <option value="Técnico">Técnico</option>
-                            <option value="Gestor">Gestor</option>
-                            <option value="Mensajero">Mensajero</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-sm-4">
-                        <label for="cedula">DOCUMENTO</label>
-                        <input type="number" class="form-control trans" id="cedula" aria-describedby="Cedula">
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="telefono">CELULAR</label>
-                        <input type="number" class="form-control trans" id="telefono" aria-describedby="telefono">
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="atis">ORDEN ATIS</label>
-                        <input type="number" class="form-control trans" id="atis" aria-describedby="Atis">
-                    </div>
-                </div>
-              </div>
-                <div class="row align-content-center justify-content-center pt-3">
-                    <div class="col-sm-auto">
-                        <button type="button" id="copiar" class="btn btn-outline-primary">NOMBRE</button>
-                        <button type="button" id="copiar1" class="btn btn-outline-primary">CEDULA</button>
-                        <button type="button" id="copiar2" class="btn btn-outline-primary">TELEFONO</button>
-                        <button type="button" id="copiar3" class="btn btn-outline-warning">ATIS</button>
-                        <button type="button" id="Tipificar" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">TIPIFICAR</button>
-                        <button type="button" id="limpiar" class="btn btn-outline-danger">LIMPIAR</button>
-                    </div>
-                </div>
-            </form>
+    <div class="row-title">
+      <div class="pt-3 d-flex justify-content-between align-items-center">
+        <div>
+          <h1 class="titulo">LINEA RESCATE</h1>
         </div>
+        <div class="customCheckBoxHolder">
+          <input type="checkbox" id="Contingencia" class="customCheckBoxInput">
+          <label for="Contingencia" class="customCheckBoxWrapper">
+              <div class="customCheckBox">
+                  <div class="inner">CONTINGENCIA</div>
+              </div>
+          </label>
+      </div>
+      </div>
+    </div>
 
-
+    <form id="Form"> <!-- Datos del tecnico -->
+      <div class="align-content-center justify-content-center datosTecnico ">
+        <h2>DATOS TECNICO</h2>
+        <div class="row">
+          <div class="form-group col-sm-8">
+            <label for="NombreTec">NOMBRE</label>
+            <input type="text" class="form-control trans" id="NombreTec" aria-describedby="NombreTecnico">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="Trabajador">TECNICO O GESTOR</label>
+            <select class="custom-select  trans" id="Trabajador">
+              <option selected>...</option>
+              <option value="Técnico">Técnico</option>
+              <option value="Gestor">Gestor</option>
+              <option value="Mensajero">Mensajero</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-4">
+            <label for="cedula">DOCUMENTO</label>
+            <input type="number" class="form-control trans" id="cedula" aria-describedby="Cedula">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="telefono">CELULAR</label>
+            <input type="number" class="form-control trans" id="telefono" aria-describedby="telefono">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="atis">ORDEN ATIS</label>
+            <input type="number" class="form-control trans" id="atis" aria-describedby="Atis">
+          </div>
+        </div>
+      </div>
+      <hr class="custom-hr"><!--Botones para guardar-->
+      <div class="row align-content-center justify-content-center pt-3">
+        <div class="col-sm-auto">
+          <button type="button" id="copiar" class="btn btn-outline-primary">NOMBRE</button>
+          <button type="button" id="copiar1" class="btn btn-outline-primary">CEDULA</button>
+          <button type="button" id="copiar2" class="btn btn-outline-primary">TELEFONO</button>
+          <button type="button" id="copiar3" class="btn btn-outline-warning">ATIS</button>
+          <button type="button" id="Tipificar" class="btn btn-outline-success" data-toggle="modal"
+            data-target="#exampleModal">TIPIFICAR</button>
+          <button type="button" id="limpiar" class="btn btn-outline-danger">LIMPIAR</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
 
 
@@ -95,7 +112,7 @@
                   <option value="3">Soporte No Aplica</option>
                 </select>
               </div>
-              
+
             </div>
             <div class="row">
               <div class="col-sm" id="contacto">
@@ -109,12 +126,7 @@
             </div>
 
             <div class="row pt-3">
-              <div class="col-sm" id="contingencia">
-                <div class="custom-control form-check-inline  custom-switch ">
-                  <input type="checkbox" class="custom-control-input " id="Contingencia">
-                  <label class="custom-control-label trans" for="Contingencia">CONTINGENCIA</label>
-                </div>
-              </div>
+              
               <div class="col-sm" id="chatbot">
                 <div class="custom-control form-check-inline  custom-switch ">
                   <input type="checkbox" class="custom-control-input " id="FC">
@@ -177,10 +189,6 @@
 
             </select>
         </div>
-
-
-
-
 
         <div class="row pt-3">
 
@@ -312,17 +320,11 @@
 
               <option> TELEFONO DEL CLIENTE ERRADO</option>
 
+              <option> INCONSISTENCIA EN LA OFERTA</option>
+
             </datalist>
           </div>
         </div>
-
-
-
-
-
-
-
-
 
 
         </form>
