@@ -6,105 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tipificador</title>
   <link rel="stylesheet" href="./dist/css/bootstrap.min.css" />
-
-  <style>
-    .trans {
-      backdrop-filter: blur(15px);
-      border-radius: 12px;
-      background: transparent;
-      color: rgb(255, 255, 255);
-      border-width: 0.3;
-    }
-
-    option {
-      color: black;
-    }
-
-
-
-    .contenedor {
-      position: relative;
-      width: 90%;
-      height: 90%;
-      display: flex;
-
-    }
-
-    .btn {
-      color: white;
-      border-radius: 8px;
-    }
-
-    .btn1 {
-      border-radius: 0px 12px 12px 0px;
-      color: black;
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(100%);
-    }
-
-    body {
-      background-image: url('dist/img/7.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      display: flex;
-      font-family: "arial-black";
-
-    }
-  </style>
-
-
-
+  <link rel="stylesheet" href="./dist/css/style.css" />
 </head>
 
 <body>
-  <div class=" contenedor trans ">
-    <form id="Form">
-      <div class="row align-content-center   justify-content-center  pt-3">
-        <div class="form-group col-sm-auto ">
-          <label for="NombreTec">Nombre</label>
-          <input type="text" class="form-control trans" id="NombreTec" aria-describedby=" NombreTecnico">
-
+  <div class="contenedor trans">
+            <h1 class="titulo">LINEA RESCATE</h1>
+            <form id="Form">
+                <div class="align-content-center justify-content-center pt-3">
+                  <div class="row">
+                    <div class="form-group col-sm-8">
+                        <label for="NombreTec">NOMBRE</label>
+                        <input type="text" class="form-control trans" id="NombreTec" aria-describedby="NombreTecnico">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="Trabajador">TECNICO O GESTOR</label>
+                        <select class="custom-select  trans" id="Trabajador">
+                            <option selected>...</option>
+                            <option value="Técnico">Técnico</option>
+                            <option value="Gestor">Gestor</option>
+                            <option value="Mensajero">Mensajero</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <label for="cedula">DOCUMENTO</label>
+                        <input type="number" class="form-control trans" id="cedula" aria-describedby="Cedula">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="telefono">CELULAR</label>
+                        <input type="number" class="form-control trans" id="telefono" aria-describedby="telefono">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="atis">ORDEN ATIS</label>
+                        <input type="number" class="form-control trans" id="atis" aria-describedby="Atis">
+                    </div>
+                </div>
+              </div>
+                <div class="row align-content-center justify-content-center pt-3">
+                    <div class="col-sm-auto">
+                        <button type="button" id="copiar" class="btn btn-outline-primary">NOMBRE</button>
+                        <button type="button" id="copiar1" class="btn btn-outline-primary">CEDULA</button>
+                        <button type="button" id="copiar2" class="btn btn-outline-primary">TELEFONO</button>
+                        <button type="button" id="copiar3" class="btn btn-outline-warning">ATIS</button>
+                        <button type="button" id="Tipificar" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">TIPIFICAR</button>
+                        <button type="button" id="limpiar" class="btn btn-outline-danger">LIMPIAR</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="form-group col-sm-auto">
-          <label for="cedula">Cédula</label>
-          <input type="text" class="form-control trans" id="cedula" aria-describedby="Cedula" />
 
-        </div>
-        <div class="form-group col-sm-auto">
-          <label for="telefono">teléfono</label>
-          <input type="text" class="form-control trans" id="telefono" aria-describedby="telefono" />
-
-        </div>
-        <div class="form-group col-sm-auto">
-          <label for="atis">Atis</label>
-          <input type="text" class="form-control trans" id="atis" aria-describedby="Atis" />
-
-        </div>
-
-
-
-        <div class="form-group  ">
-          <div class="col-sm-auto">
-            <button type="button" id="copiar" class="btn btn-outline-primary ">Nombre</button>
-            <button type="button" id="copiar1" class="btn btn-outline-primary">Cédula</button>
-            <button type="button" id="copiar2" class="btn btn-outline-primary">Teléfono</button>
-            <button type="button" id="copiar3" class="btn btn-outline-warning">Atis</button>
-            <button type="button" id="Tipificar" class="btn btn-outline-success" data-toggle="modal"
-              data-target="#exampleModal">Tipificar</button>
-            <button type="button" id="limpiar" class="btn btn-outline-danger">Limpiar</button>
-          </div>
-        </div>
-      </div>
-    </form>
-
-  </div>
 
 
 
@@ -143,14 +95,7 @@
                   <option value="3">Soporte No Aplica</option>
                 </select>
               </div>
-              <div class="col-sm-6">
-                <label class="my-1 mr-2" for="Trabajador">Técnico o Gestor</label>
-                <select class="custom-select my-1 mr-sm-2 trans" id="Trabajador">
-                  <option selected>...</option>
-                  <option value="Técnico">Técnico</option>
-                  <option value="Gestor">Gestor</option>
-                </select>
-              </div>
+              
             </div>
             <div class="row">
               <div class="col-sm" id="contacto">
@@ -259,7 +204,7 @@
         <div class="row" id="Titular">
           <div class="col-sm" id="numt">
             <label for="NumTitular">Numero de Titular</label>
-            <input type="text" class="form-control trans" id="NumTitular" required>
+            <input type="number" class="form-control trans" id="NumTitular" required>
           </div>
           <div class="col-sm pt-3" id="nomt">
             <label for="NomTitular">Nombre de Titular</label>
