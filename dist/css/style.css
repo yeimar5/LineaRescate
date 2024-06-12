@@ -1,14 +1,14 @@
  /* Oculta las flechas en los campos number */
- input[type="number"]::-webkit-inner-spin-button,
- input[type="number"]::-webkit-outer-spin-button {
-   -webkit-appearance: none;
-   margin: 0;
- }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 textarea {
     width: calc(100% - 10px);
     height: 100px;
-    resize: none;
-   
+    resize: none;   
 }
 
 .trans {
@@ -62,24 +62,16 @@ body {
     margin: 20px 0;
   }
 
-  h2{
-    text-align: left;
+  h1{
     width: 100%;
     font-weight: bold;
     padding-bottom: 15px;
-    font-size: 20px;
   }
 
-  .row-title {
-    width: 85%;
-    
-}
 
 .titulo {
-    margin: 0; /* Remove any default margin */
-    padding: 1rem; /* Adjust this value as needed for spacing */
-    flex: 1; /* Allow title to take up available space */
-    text-align: center; /* Ensure the text is aligned to the left */
+  display: flex;
+  font-weight: bolder;
 }
 
 #contingencia {
