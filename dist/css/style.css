@@ -69,17 +69,23 @@ body {
   }
 
 
-.titulo {
+/* Estilos para el contenedor principal */
+.divPrincipal {
   display: flex;
-  font-weight: bolder;
+  justify-content: space-between; /* Alinea los elementos al inicio y al final */
+  align-items: center; /* Alinea verticalmente los elementos */
 }
 
-#contingencia {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-shrink: 0; /* Prevent shrinking */
-    font-weight: bold;
+/* Estilos para el título */
+.titulo {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+/* Estilos para el customCheckBoxHolder */
+.customCheckBoxHolder {
+  display: flex;
+  align-items: center;
 }
 
 .customCheckBoxHolder {
@@ -93,7 +99,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     user-select: none;
-    padding: 2px 8px;
+    padding: 4px 10px;
     background-color: rgba(0, 0, 0, 0.16);
     border-radius: 0px;
     color: rgba(255, 255, 255, 0.7);
@@ -101,7 +107,7 @@ body {
     transition-duration: 300ms;
     transition-property: color, background-color, box-shadow;
     display: flex;
-    height: 32px;
+    height: 40px;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
     outline: none;
