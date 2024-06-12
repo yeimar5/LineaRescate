@@ -59,13 +59,13 @@ body {
 }*/
 .custom-hr {
     border-top: 2px solid #ffffff;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   h1{
     width: 100%;
     font-weight: bold;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
 
 
@@ -79,7 +79,7 @@ body {
 /* Estilos para el título */
 .titulo {
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 /* Estilos para el customCheckBoxHolder */
@@ -107,7 +107,7 @@ body {
     transition-duration: 300ms;
     transition-property: color, background-color, box-shadow;
     display: flex;
-    height: 40px;
+    height: 50px;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
     outline: none;
