@@ -308,7 +308,6 @@ function manejarBotonAddon1() {
 
 function resetearFormularios() {
   Form.reset();
-  Formulario.reset();
 }
 
 function manejarTipificar() {
